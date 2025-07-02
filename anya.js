@@ -5,7 +5,6 @@ const baseApiUrl = "https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/ma
 module.exports = {
   config: {
     name: "anya",
-    aliases: [],
     version: "1.0",
     author: "Jubayer",
     countDown: 5,
