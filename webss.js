@@ -1,12 +1,12 @@
 const axios = require('axios');
 
-const jubayer = "https://raw.githubusercontent.com/HXXJUBAYER/JUBAYE4/main/baseApiUrl.json";
+const jubayer = "https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/main/baseApiUrl.json";
 
 module.exports.config = {
   name: "webss",
   aliases: ["screenshot"],
   version: "1.0",
-  author: "JUBAYER AHMED",
+  author: "Jubayer",
   cooldown: 5,
   description: "Get website screenshot using jubayer screenshot API",
   usage: "[url]",
