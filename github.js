@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const jubayer = "https://raw.githubusercontent.com/HXXJUBAYER/JUBAYE4/main/baseApiUrl.json";
+const jubayer = "https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/main/baseApiUrl.json";
 
 module.exports = {
   config: {
