@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const baseApiUrl = async () => {
-  const re = await axios.get("https://raw.githubusercontent.com/HXXJUBAYER/JUBAYE4/main/baseApiUrl.json");
+  const re = await axios.get("https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/main/baseApiUrl.json");
   return re.data.jubayer;
 };
 
