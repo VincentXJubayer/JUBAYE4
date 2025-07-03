@@ -7,5 +7,6 @@
   "gitSearch": "https://jubayer-githubsearch-apis.vercel.app",
   "flag-game": "https://jubayer-flag-apis.vercel.app",
   "pollinations": "https://jubayer-pollinations-apis.vercel.app",
-  "unsplash": "https://jubayer-unsplash-apis.vercel.app"
+  "unsplash": "https://jubayer-unsplash-apis.vercel.app",
+  "rndm-api": "https://jubayer-rndm-apis.vercel.app"
 }
