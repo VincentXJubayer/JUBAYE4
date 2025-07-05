@@ -1,5 +1,7 @@
 const axios = require("axios");
 
+const baseApiUrl = "https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/main/baseApiUrl.json";
+
 module.exports.config = {
   name: "bot",
   version: "2.0",
@@ -10,8 +12,6 @@ module.exports.config = {
   usages: "[teach/delete/edit/info/keyinfo] or ask a question",
   cooldowns: 1,
 };
-
-const api = "";
 
 const responses = [
   "আমাকে মেনশন দিয়ে লাভ নেই-!!😐🥲",
@@ -44,7 +44,7 @@ module.exports.run = async function ({ api, event, args }) {
     const [ask, ans] = content.split(" - ");
     if (!ask || !ans) return api.sendMessage("❌ Teach format: bot teach প্রশ্ন - উত্তর", threadID, messageID);
     try {
-      const res = await axios.get(`${api}?type=teach&ask=${encodeURIComponent(ask)}&ans=${encodeURIComponent(ans)}&uid=${senderName}`);
+      const res = await axios.get(`${baseApiUrl}?type=teach&ask=${encodeURIComponent(ask)}&ans=${encodeURIComponent(ans)}&uid=${senderName}`);
       return api.sendMessage(res.data.success ? `✅ শেখা সম্পন্ন: "${ask}" → "${ans}"` : `❌ ${res.data.msg}`, threadID, messageID);
     } catch (e) {
       return api.sendMessage("🚫 Teach API error.", threadID, messageID);
@@ -55,7 +55,7 @@ module.exports.run = async function ({ api, event, args }) {
     const [ask, ans] = content.split(" - ");
     if (!ask || !ans) return api.sendMessage("❌ Delete format: bot delete প্রশ্ন - উত্তর", threadID, messageID);
     try {
-      const res = await axios.get(`${api}?type=delete&ask=${encodeURIComponent(ask)}&ans=${encodeURIComponent(ans)}`);
+      const res = await axios.get(`${baseApiUrl}?type=delete&ask=${encodeURIComponent(ask)}&ans=${encodeURIComponent(ans)}`);
       return api.sendMessage(res.data.success ? `🗑️ মুছে ফেলা হলো: "${ans}" from "${ask}"` : `❌ ${res.data.msg}`, threadID, messageID);
     } catch {
       return api.sendMessage("🚫 Delete API error.", threadID, messageID);
@@ -66,7 +66,7 @@ module.exports.run = async function ({ api, event, args }) {
     const [oldAsk, newAsk] = content.split(" - ");
     if (!oldAsk || !newAsk) return api.sendMessage("❌ Edit format: bot edit পুরাতনপ্রশ্ন - নতুনপ্রশ্ন", threadID, messageID);
     try {
-      const res = await axios.get(`${api}?type=edit&old=${encodeURIComponent(oldAsk)}&new=${encodeURIComponent(newAsk)}`);
+      const res = await axios.get(`${baseApiUrl}?type=edit&old=${encodeURIComponent(oldAsk)}&new=${encodeURIComponent(newAsk)}`);
       return api.sendMessage(res.data.success ? `✏️ এডিট সম্পন্ন: "${oldAsk}" → "${newAsk}"` : `❌ ${res.data.msg}`, threadID, messageID);
     } catch {
       return api.sendMessage("🚫 Edit API error.", threadID, messageID);
@@ -75,7 +75,7 @@ module.exports.run = async function ({ api, event, args }) {
 
   if (cmd === "info") {
     try {
-      const res = await axios.get(`${api}?type=info`);
+      const res = await axios.get(`${baseApiUrl}?type=info`);
       const { totalKeys, totalResponses } = res.data.data;
       return api.sendMessage(`📊 মোট প্রশ্ন: ${totalKeys}\n💬 মোট উত্তর: ${totalResponses}`, threadID, messageID);
     } catch {
@@ -87,7 +87,7 @@ module.exports.run = async function ({ api, event, args }) {
     const ask = content;
     if (!ask) return api.sendMessage("❌ Keyinfo format: bot keyinfo প্রশ্ন", threadID, messageID);
     try {
-      const res = await axios.get(`${api}?type=keyinfo&ask=${encodeURIComponent(ask)}`);
+      const res = await axios.get(`${baseApiUrl}?type=keyinfo&ask=${encodeURIComponent(ask)}`);
       if (!res.data.success) return api.sendMessage(`❌ ${res.data.msg}`, threadID, messageID);
       const list = res.data.data.answers.map((a, i) => `${i + 1}. ${a}`).join("\n");
       return api.sendMessage(`📚 উত্তরসমূহ:\n${list}`, threadID, messageID);
@@ -97,7 +97,7 @@ module.exports.run = async function ({ api, event, args }) {
   }
 
   try {
-    const res = await axios.get(`${api}?type=ask&ask=${encodeURIComponent(input)}`);
+    const res = await axios.get(`${baseApiUrl}?type=ask&ask=${encodeURIComponent(input)}`);
     return api.sendMessage(res.data.success ? res.data.data.msg : "🤖 আমি এখনো এই প্রশ্নের উত্তর জানি না।", threadID, messageID);
   } catch {
     return api.sendMessage("🚫 Chat API error.", threadID, messageID);
