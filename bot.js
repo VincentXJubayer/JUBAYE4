@@ -130,7 +130,7 @@ module.exports.handleEvent = async function ({ event, api }) {
 
   if (lowered === "bot" || lowered === "বট") {
     const random = responses[Math.floor(Math.random() * responses.length)];
-    const msg = await api.sendMessage(`•—»✨${userName}✨«—•\n\n╭•┄┅═══❁🌺❁═══┅┄•╮\n${random}\n╰•┄┅═══❁🌺❁═══┅┄•╯`, threadID);
+    const msg = await api.sendMessage(`•—»✨${name}✨«—•\n\n╭•┄┅═══❁🌺❁═══┅┄•╮\n${random}\n╰•┄┅═══❁🌺❁═══┅┄•╯`, threadID);
     botMessageIds.add(msg.messageID);
     return;
   }
