@@ -311,7 +311,7 @@ const FONT = {
 module.exports.run = async ({ api, event, args }) => {
   if (!args.length)
     return api.sendMessage(
-      "❌ Please enter the text after the command.\nExample: .bigtext hello",
+      "❌ Please enter the text after the command.",
       event.threadID,
       event.messageID
     );
