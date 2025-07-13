@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 module.exports.config = {
-  name: "driveupload",
+  name: "drive",
   version: "1.0.0",
   hasPermission: 0,
   credits: "Jubayer",
