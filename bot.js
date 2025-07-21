@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const baseApiUrl = "https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/main/apis.json";
+const baseApiUrl = "https://islamic-cyber-chat-simsimi-apis-05.onrender.com/sim";
 
 module.exports.config = {
   name: "bot",
