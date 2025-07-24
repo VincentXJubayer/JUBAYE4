@@ -1,14 +1,16 @@
 {
-  "fontApi": "https://jubayer-font-api-07.vercel.app",
-  "birthApi": "https://jubayer-birth-api20-raiwzrvum-jubayer-404-ghosts-projects.vercel.app",
-  "screenshotApi": "https://jubayer-screenshort-apis-xy.onrender.com",
-  "driveApi": "https://jubayer-drive-uploader-api-url.vercel.app",
-  "anya": "https://jubayer-ai-apis.vercel.app/api/jubayer",
-  "gitSearch": "https://jubayer-githubsearch-apis.vercel.app",
-  "flag-game": "https://jubayer-flag-apis.vercel.app",
-  "pollinations": "https://jubayer-pollinations-apis.vercel.app",
-  "unsplash": "https://jubayer-unsplash-apis.vercel.app",
-  "rndm-api": "https://jubayer-rndm-apis.vercel.app",
-  "simsimi": "https://islamic-cyber-chat-simsimi-apis.onrender.com/sim",
-  "erza": "https://jubayer-erza-apis-404.onrender.com/erza"
+  "baseApiUrls": {
+    "font": "https://jubayer-font-api-07.vercel.app",
+    "birth": "https://jubayer-birth-api20-raiwzrvum-jubayer-404-ghosts-projects.vercel.app",
+    "screenshot": "https://jubayer-screenshort-apis-xy.onrender.com",
+    "drive": "https://jubayer-drive-uploader-api-url.vercel.app",
+    "anya": "https://jubayer-ai-apis.vercel.app/api/jubayer",
+    "github": "https://jubayer-githubsearch-apis.vercel.app",
+    "flag": "https://jubayer-flag-apis.vercel.app",
+    "pollinations": "https://jubayer-pollinations-apis.vercel.app",
+    "unsplash": "https://jubayer-unsplash-apis.vercel.app",
+    "random": "https://jubayer-rndm-apis.vercel.app",
+    "simsimi": "https://islamic-cyber-chat-simsimi-apis.onrender.com/sim",
+    "erza": "https://jubayer-erza-apis-404.onrender.com/erza"
+  }
 }
