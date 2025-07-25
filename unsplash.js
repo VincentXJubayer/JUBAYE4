@@ -2,7 +2,7 @@ const axios = require("axios");
 const path = require("path");
 const fs = require("fs");
 
-const jubayer = "https://raw.githubusercontent.com/VincentXJubayer/JUBAYE4/main/baseApiUrl.json";
+const jubayer = "https://jubayer-unsplash-apis.vercel.app";
 
 module.exports = {
   config: {
